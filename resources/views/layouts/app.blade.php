@@ -15,7 +15,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <livewire:styles />
     </head>
-    <body class="font-sans antialiased max-w-lg mx-auto bg-gray-100">
+    <body class="font-sans antialiased max-w-lg mx-auto bg-gray-100 box-border">
         <div class="min-h-screen bg-white dark:bg-gray-900">
             @if (isset($header))
                 <header class="bg-white dark:bg-gray-800">
