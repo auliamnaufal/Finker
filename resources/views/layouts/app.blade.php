@@ -13,6 +13,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <livewire:styles />
     </head>
     <body class="font-sans antialiased max-w-lg mx-auto bg-gray-100">
         <div class="min-h-screen bg-white dark:bg-gray-900">
@@ -31,5 +32,8 @@
             @include('layouts.navigation')
 
         </div>
+
+        <livewire:scripts />
+        @livewireChartsScripts
     </body>
 </html>
