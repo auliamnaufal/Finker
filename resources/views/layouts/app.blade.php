@@ -30,10 +30,12 @@
             </main>
 
             @include('layouts.navigation')
-
+....
         </div>
 
         <livewire:scripts />
         @livewireChartsScripts
+        @livewire('livewire-ui-modal')
+
     </body>
 </html>
