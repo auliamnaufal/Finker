@@ -44,13 +44,11 @@
             </div>
 
             <div class="mt-8">
-                <h2 class="text-xl font-bold">Recent Transaction</h2>
+                <h2 class="text-xl font-bold">Today's Transaction</h2>
 
                 <div class="px-2 mt-4 space-y-4 divide-y divide-gray-200">
 
-                    <x-transaction-item amount="20" type="expense" name="Baju Uniqlo" date="Wed, 12 Apr 2023" />
-                    <x-transaction-item amount="12" type="income" name="Baju Uniqlo" date="Wed, 12 Apr 2023" />
-
+                    <livewire:todays-transaction />
 
                 </div>
             </div>
