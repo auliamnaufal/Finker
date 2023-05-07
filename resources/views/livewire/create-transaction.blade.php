@@ -67,38 +67,19 @@
         <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
 
         <div class="flex justify-start items-center py-4 px-2 overflow-x-auto gap-5">
-            <div>
-                <input type="radio" id="shop" name="category" value="shop" class="hidden peer">
-                <label for="shop" class="inline-flex items-center justify-center w-12 h-12 bg-pink-300 rounded-lg ring-2 ring-offset-1 ring-transparent peer-checked:ring-blue-300">
-                    <div class="block">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-pink-500">
-                            <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                </label>
-            </div>
+            @foreach($categories as $category)
 
-            <div>
-                <input type="radio" id="vehicle" name="category" value="vehicle" class="hidden peer">
-                <label for="vehicle" class="inline-flex items-center justify-center w-12 h-12 bg-pink-300 rounded-lg ring-2 ring-offset-1 ring-transparent peer-checked:ring-blue-300">
-                    <div class="block">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-pink-500">
-                            <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                </label>
-            </div>
+                <div class="flex flex-col justify-center items-center">
+                    <input type="radio" id="{{ $category->name }}" name="category" value="{{ $category->name }}" class="hidden peer">
+                    <label for="{{ $category->name }}" class="inline-flex items-center justify-center w-12 h-12 mb-1 bg-blue-300 rounded-lg ring-2 ring-offset-1 ring-transparent peer-checked:ring-blue-300 hover:cursor-pointer">
+                        <div class="block">
+                            {!! $category->logo !!}
+                        </div>
+                    </label>
+                    <p class="text-sm">{{ $category->name }}</p>
+                </div>
 
-            <div>
-                <input type="radio" id="entertainment" name="category" value="entertainment" class="hidden peer">
-                <label for="entertainment" class="inline-flex items-center justify-center w-12 h-12 bg-pink-300 rounded-lg ring-2 ring-offset-1 ring-transparent peer-checked:ring-blue-300">
-                    <div class="block">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-pink-500">
-                            <path fill-rule="evenodd" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                </label>
-            </div>
+            @endforeach
 
         </div>
 
