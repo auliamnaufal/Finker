@@ -30,7 +30,6 @@
             </main>
 
             @include('layouts.navigation')
-....
         </div>
 
         <livewire:scripts />
