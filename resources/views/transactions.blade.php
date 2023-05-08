@@ -55,31 +55,23 @@
                      class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 space-y-4 divide-y divide-gray-200"
                      id="all">
 
-                    @foreach (range(1, 3) as $i)
-
-                        <x-transaction-item amount="20" type="expense" name="Baju Uniqlo" date="Wed, 12 Apr 2023"/>
-                        <x-transaction-item amount="12" type="income" name="Baju Uniqlo" date="Wed, 12 Apr 2023"/>
-
-                    @endforeach
+                    <livewire:transaction-list type="all" />
 
                 </div>
                 <div x-show="tab === 'expenses-tab'"
                      class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 space-y-4 divide-y divide-gray-200"
                      id="expenses">
-                    @foreach (range(1, 3) as $i)
 
-                        <x-transaction-item amount="20" type="expense" name="Baju Uniqlo" date="Wed, 12 Apr 2023"/>
+                    <livewire:transaction-list type="expense" />
 
-                    @endforeach
+
                 </div>
                 <div x-show="tab === 'incomes-tab'"
                      class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 space-y-4 divide-y divide-gray-200"
                      id="incomes">
-                    @foreach (range(1, 3) as $i)
 
-                        <x-transaction-item amount="12" type="income" name="Baju Uniqlo" date="Wed, 12 Apr 2023"/>
+                    <livewire:transaction-list type="income" />
 
-                    @endforeach
                 </div>
             </div>
         </div>
