@@ -72,7 +72,7 @@
                 <div class="flex flex-col justify-center items-center">
                     <input type="radio" id="{{ $category->name }}" name="category" value="{{ $category->name }}" class="hidden peer">
                     <label for="{{ $category->name }}" class="inline-flex items-center justify-center w-12 h-12 mb-1 bg-blue-300 rounded-lg ring-2 ring-offset-1 ring-transparent peer-checked:ring-blue-300 hover:cursor-pointer">
-                        <div class="block">
+                        <div class="block text-blue-500">
                             {!! $category->logo !!}
                         </div>
                     </label>
