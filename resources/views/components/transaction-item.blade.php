@@ -6,13 +6,13 @@
   'logo'
 ])
 
-<div class="grid grid-cols-6 items-center pt-4">
+<div class="grid grid-cols-6 items-center pt-3">
     <div class="w-12 h-12 bg-blue-300 text-blue-500 rounded-lg flex justify-center items-center ">
         {!! $logo ?? '' !!}
     </div>
 
     <div class="col-span-3">
-        <h3 class="font-bold text-black">{{ $name }}</h3>
+        <h3 class="font-semibold text-black">{{ $name }}</h3>
         <p class="font-light text-sm text-gray-500">{{ $date }}</p>
     </div>
     <div class="col-span-2 flex justify-end items-center">
