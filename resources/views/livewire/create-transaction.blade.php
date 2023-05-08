@@ -3,7 +3,7 @@
     <h3 class="mb-5 text-lg text-center font-medium text-gray-900 dark:text-white">Create new transaction</h3>
     <ul class="grid w-full gap-6 grid-cols-2">
         <li>
-            <input type="radio" id="expense" name="type" value="expense" class="hidden peer" required checked>
+            <input type="radio" wire:model="type" id="expense" name="type" value="expense" class="hidden peer" required checked>
             <label for="expense" class="inline-flex items-center justify-center w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:bg-blue-600 peer-checked:text-white hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                 <div class="block">
                     <span>Expense</span>
@@ -11,7 +11,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" id="income" name="type" value="income" class="hidden peer">
+            <input type="radio" wire:model="type" id="income" name="type" value="income" class="hidden peer">
             <label for="income" class="inline-flex items-center justify-center w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:bg-blue-600 peer-checked:text-white hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                 <div class="block">
                     <span>Income</span>
@@ -31,7 +31,7 @@
             </div>
             <input type="datetime-local" id="time" name="time"
                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                   placeholder="Select date">
+                   placeholder="Select date" wire:model="time">
         </div>
     </div>
 
@@ -45,7 +45,7 @@
             </div>
             <input type="number" id="amount" name="amount"
                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                   placeholder="Insert amount">
+                   placeholder="Insert amount" wire:model="amount">
         </div>
     </div>
 
@@ -59,7 +59,7 @@
             </div>
             <input type="text" id="name" name="name"
                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                   placeholder="Name">
+                   placeholder="Name" wire:model="name">
         </div>
     </div>
 
@@ -70,7 +70,7 @@
             @foreach($categories as $category)
 
                 <div class="flex flex-col justify-center items-center">
-                    <input type="radio" id="{{ $category->name }}" name="category" value="{{ $category->name }}" class="hidden peer">
+                    <input type="radio" id="{{ $category->name }}" wire:model="category" name="category" value="{{ $category->id }}" class="hidden peer">
                     <label for="{{ $category->name }}" class="inline-flex items-center justify-center w-12 h-12 mb-1 bg-blue-300 rounded-lg ring-2 ring-offset-1 ring-transparent peer-checked:ring-blue-300 hover:cursor-pointer">
                         <div class="block text-blue-500">
                             {!! $category->logo !!}
@@ -86,7 +86,7 @@
     </div>
 
     <div class="mt-10">
-        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add transaction</button>
+        <button type="button" wire:click.prevent="createTransaction" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add transaction</button>
     </div>
 
 </div>
