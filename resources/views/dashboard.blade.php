@@ -24,7 +24,7 @@
             <div class="mt-8">
                 <h2 class="text-xl font-bold">Today's Transaction</h2>
 
-                <div class="px-2 mt-4 space-y-4 divide-y divide-gray-200">
+                <div class="mt-4 space-y-4 divide-y divide-gray-200">
 
                     <livewire:todays-transaction />
 
