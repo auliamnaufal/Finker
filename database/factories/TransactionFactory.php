@@ -23,6 +23,7 @@ class TransactionFactory extends Factory
             'name' => fake()->name(),
             'amount' => fake()->numberBetween('1', '2000'),
             'type' => fake()->randomElement(['expense', 'income']),
+            'created_at' => fake()->dateTimeBetween('-3 months', 'now')
         ];
     }
 }
