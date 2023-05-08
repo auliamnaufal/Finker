@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             'email' => "auliamnaufal@gmail.com"
         ]);
 
+        User::factory(4)->create();
+
         Category::factory(3)
             ->state(new Sequence(
                 ['logo' => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-blue-500">
