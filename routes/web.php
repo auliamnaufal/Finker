@@ -30,6 +30,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/transactions', function () {
         return view('transactions');
     })->name('transactions');
+
+    Route::get('/settings', function () {
+        return view('settings');
+    })->name('settings');
 });
 
 require __DIR__.'/auth.php';

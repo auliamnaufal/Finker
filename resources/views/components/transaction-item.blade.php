@@ -6,7 +6,7 @@
   'logo'
 ])
 
-<div class="grid grid-cols-6 items-center pt-3">
+<div class="grid grid-cols-6 items-center pt-6">
     <div class="w-12 h-12 bg-blue-300 text-blue-500 rounded-lg flex justify-center items-center ">
         {!! $logo ?? '' !!}
     </div>
