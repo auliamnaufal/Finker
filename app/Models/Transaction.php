@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Scopes\LoggedInUserScope;
+use App\Models\Scopes\ThisMonthScope;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,5 +26,6 @@ class Transaction extends Model
     protected static function booted()
     {
         static::addGlobalScope(new LoggedInUserScope);
+        static::addGlobalScope(new ThisMonthScope);
     }
 }
