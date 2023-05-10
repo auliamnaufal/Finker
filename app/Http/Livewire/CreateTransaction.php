@@ -23,7 +23,7 @@ class CreateTransaction extends ModalComponent
         'category' => 'required',
     ];
 
-    function createTransaction()
+    public function createTransaction()
     {
         $this->validate();
 
@@ -32,10 +32,12 @@ class CreateTransaction extends ModalComponent
             'category_id' => $this->category,
             'name' => $this->name,
             'amount' => $this->amount,
-            'type' => $this->type
+            'type' => $this->type,
         ]);
 
-        $this->closeModal();
+        $this->closeModalWithEvents([
+            'transactionCreated'
+        ]);
     }
 
     public function render()
