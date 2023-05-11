@@ -1,0 +1,7 @@
+.navbar-item-active {
+    @apply  after:content-['•'] after:text-blue-500 after:-mt-2;
+}
+
+.navbar-item-active svg {
+    @apply text-blue-600;
+}
