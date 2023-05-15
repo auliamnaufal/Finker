@@ -50,7 +50,8 @@
             <div>
                 <div x-show="tab === 'all-tab'"
                     x-transition
-                     x-transition.duration.500ms
+                     x-transition:enter.duration.500ms
+                     x-transition:leave.duration.200ms
                      class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 space-y-4 divide-y divide-gray-200"
                      id="all">
 
@@ -59,7 +60,8 @@
                 </div>
                 <div x-show="tab === 'expenses-tab'"
                     x-transition
-                     x-transition.duration.500ms
+                     x-transition:enter.duration.500ms
+                     x-transition:leave.duration.200ms
                      class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 space-y-4 divide-y divide-gray-200"
                      id="expenses">
 
@@ -69,7 +71,8 @@
                 </div>
                 <div x-show="tab === 'incomes-tab'"
                     x-transition
-                     x-transition.duration.500ms
+                     x-transition:enter.duration.500ms
+                     x-transition:leave.duration.200ms
                      class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 space-y-4 divide-y divide-gray-200"
                      id="incomes">
 
