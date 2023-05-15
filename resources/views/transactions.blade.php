@@ -7,7 +7,7 @@
     </x-slot>
 
     <div class="pb-20">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8" x-data="{ tab: 'all-tab' }">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8" x-data="{ tab: 'all-tab' }">
             <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
                 <ul class="grid grid-cols-3 -mb-px text-sm font-medium text-center dark:text-gray-400">
                     <li>
