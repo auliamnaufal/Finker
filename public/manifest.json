@@ -1,0 +1,17 @@
+{
+    "name": "Finker",
+    "short_name": "Finker",
+    "start_url": "/",
+    "background_color": "#1B65F1",
+    "description": "Track your financials with Finker",
+    "display": "fullscreen",
+    "theme_color": "#1B65F1",
+    "icons": [
+        {
+            "src": "./storage/logo_bg.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
