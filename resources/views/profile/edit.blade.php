@@ -28,6 +28,12 @@
 
             <div class="p-4 sm:p-8 rounded-lg bg-gray-50">
                 <div class="max-w-xl">
+                    @include('profile.partials.logout-user')
+                </div>
+            </div>
+
+            <div class="p-4 sm:p-8 rounded-lg bg-gray-50">
+                <div class="max-w-xl">
                     @include('profile.partials.delete-user-form')
                 </div>
             </div>
