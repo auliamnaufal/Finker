@@ -7,7 +7,7 @@
     </x-slot>
 
     <div class="pb-20">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8" x-data="{ tab: 'all-tab' }">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8" x-data="{ tab: 'all-tab' }">
             <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
                 <ul class="grid grid-cols-3 -mb-px text-sm font-medium text-center dark:text-gray-400">
                     <li>
@@ -49,6 +49,9 @@
             </div>
             <div>
                 <div x-show="tab === 'all-tab'"
+                    x-transition
+                     x-transition:enter.duration.500ms
+                     x-transition:leave.duration.200ms
                      class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 space-y-4 divide-y divide-gray-200"
                      id="all">
 
@@ -56,6 +59,9 @@
 
                 </div>
                 <div x-show="tab === 'expenses-tab'"
+                    x-transition
+                     x-transition:enter.duration.500ms
+                     x-transition:leave.duration.200ms
                      class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 space-y-4 divide-y divide-gray-200"
                      id="expenses">
 
@@ -64,6 +70,9 @@
 
                 </div>
                 <div x-show="tab === 'incomes-tab'"
+                    x-transition
+                     x-transition:enter.duration.500ms
+                     x-transition:leave.duration.200ms
                      class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 space-y-4 divide-y divide-gray-200"
                      id="incomes">
 
