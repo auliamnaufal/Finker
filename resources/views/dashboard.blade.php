@@ -9,7 +9,7 @@
     </x-slot>
 
     <div class="pb-20">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="mt-2">
                 <h2 class="text-xl font-bold text-center mb-2">Breakdown</h2>
                 <livewire:dashboard-breakdown/>
