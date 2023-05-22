@@ -39,6 +39,8 @@ class DatabaseSeeder extends Seeder
             ->create();
 
         Transaction::factory(20)->create();
-
+        Transaction::factory(5)->create([
+            'user_id' => 1
+        ]);
     }
 }
