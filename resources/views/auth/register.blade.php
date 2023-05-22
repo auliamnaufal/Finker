@@ -1,5 +1,5 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+<x-guest-layout >
+    <form method="POST" action="{{ route('register') }}" >
         @csrf
 
         <!-- Name -->
@@ -44,7 +44,7 @@
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="ml-4">
+            <x-primary-button class="ml-4 bg-sky-400 hover:bg-sky-600 active:bg-sky-700 focus:ring-sky-300">
                 {{ __('Register') }}
             </x-primary-button>
         </div>

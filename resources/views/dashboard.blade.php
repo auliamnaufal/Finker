@@ -3,7 +3,7 @@
         <div class="flex items-center space-x-4">
             <div class="font-medium dark:text-white">
                 <div>{{ $user->name }}</div>
-                <div class="text-sm text-gray-500 dark:text-gray-400">Last Activity in {{ date_format($user->transactions->last()->created_at, 'D, d M Y : H.m a') }}</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">Last Activity in {{ $user->transactions->last() == null ? '' : date_format($user->transactions->last()->created_at, 'D, d M Y : H.m a') }}</div>
             </div>
         </div>
     </x-slot>
