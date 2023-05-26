@@ -23,17 +23,26 @@
 
         <nav class=" p-1 bg-transparent flex justify-between items-center">
             <div class="">
-                <img class=" h-14 ml-8 mt-6 lg:h-28 md:h-20 sm:h-16  bg-pink-200 sm:bg-red-400 lg:bg-sky-400 md:bg-green-400 xl:bg-purple-400" src="{{ asset('img/logo.png') }}" alt="">
+                <img class=" h-14 ml-8 mt-6 lg:h-28 md:h-20 sm:h-16" src="{{ asset('img/logo.png') }}" alt="">
             </div>
-    
+
+            @auth
             <div class=" h-1 mr-5 lg:mr-20 lg:h-16  md:mr-12 md:h-12 sm:mb-8 sm:mr-7 md:mt-8  grid grid-cols-2 ">
-                <button class="px-5 py-2 mt-3 text-white text-xs sm:text-sm  font-semibold font-inter block  hover:text-slate-100 flex-1 m-1  ">
-                   <a href="{{ route('login') }}">Log In</a></button>
+                    <button class="px-5 py-2 mt-3 text-white text-xs sm:text-sm  font-semibold font-inter block  hover:text-slate-100 flex-1 m-1  ">
+                    <a href="{{ route('dashboard') }}">Dashboard</a></button>
+                </div>
+            @else
+                <div class=" h-1 mr-5 lg:mr-20 lg:h-16  md:mr-12 md:h-12 sm:mb-8 sm:mr-7 md:mt-8  grid grid-cols-2 ">
+                    <button class="px-5 py-2 mt-3 text-white text-xs sm:text-sm  font-semibold font-inter block  hover:text-slate-100 flex-1 m-1  ">
+                    <a href="{{ route('login') }}">Log In</a></button>
+        
+                    <button
+                        class="px-5 py-2 border border-white rounded-lg  text-white text-xs sm:text-sm  hover:text-slate-300 hover:bg-white hover:duration-500 transition-all ease-linear font-semibold font-inter block flex-1 m-1">
+                        <a href="{{ route('register') }}">Sign Up</a></button>
+                </div>
+
+            @endauth
     
-                <button
-                    class="px-5 py-2 border border-white rounded-lg  text-white text-xs sm:text-sm  hover:text-slate-300 hover:bg-white hover:duration-500 transition-all ease-linear font-semibold font-inter block flex-1 m-1">
-                     <a href="{{ route('register') }}">Sign Up</a></button>
-            </div>
     
     
         </nav>
