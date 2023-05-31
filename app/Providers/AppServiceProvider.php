@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
+use App\Models\User;
+use Illuminate\Support\Facades\Gate;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('*',function($view) {
             $view->with('user', Auth::user());
+        });
+
+        Gate::define('isPro', function(User $user) {
+            return $user->is_pro == 1;
         });
     }
 }
