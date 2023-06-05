@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="font-medium dark:text-white">
             <div>{{ $user->name }}</div>
-            <div class="text-sm text-gray-500 dark:text-gray-400">Last Activity in {{ date_format($user->transactions->last()->created_at, 'D, d M Y : H.m a') }}</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">Last Activity in {{ $user->transactions->last() ? date_format($user->transactions->last()->created_at, 'D, d M Y : H.m a') : '-' }}</div>
         </div>
     </x-slot>
 
@@ -85,16 +85,16 @@
 
         </div>
 
-    @else 
+    @else
     <div class="flex justify-center items-center flex-col mt-64">
            <h2 class="text-center text-xl">If you wanna use this features upgrade to pro!</h2>
            <br>
-            <button class="bg-sky-400 rounded-md px-5 py-2 text-white  hover:bg-sky-500 ">Upgrade Now</button>  
+            <button class="bg-sky-400 rounded-md px-5 py-2 text-white  hover:bg-sky-500 ">Upgrade Now</button>
     </div>
-            
-         
-    
+
+
+
     @endcan
 
-    
+
 </x-app-layout>
