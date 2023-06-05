@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_pro'
     ];
 
     /**
@@ -40,6 +41,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'is_pro' => 'boolean'
     ];
 
     public function transactions() {

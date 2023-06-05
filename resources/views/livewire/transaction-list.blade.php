@@ -1,6 +1,6 @@
 <div>
-    @foreach($transactionsByDay as $day => $transactions)
-        <p class="text-black mt-6 font-bold pb-2">
+    @forelse($transactionsByDay as $day => $transactions)
+        <p class="text-black font-bold pb-2">
             {{ $day }}
         </p>
         <hr>
@@ -12,6 +12,10 @@
                                 :logo="$transaction->category->logo"/>
 
         @endforeach
-    @endforeach
+    @empty
+        <p class="text-black mt-6 font-bold pb-2">
+            No transactions created
+        </p>
+    @endforelse
 
 </div>
